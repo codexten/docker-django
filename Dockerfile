@@ -54,11 +54,11 @@ ENV PATH /home/codexten/.local/bin:${PATH}
 #
 #ENV USER www-data
 #USER ${USER}
-ADD ./django/init.sh /opt/init.sh
+
 #RUN chown -R www-data:www-data /var/www/init.sh
 #RUN chmod +x /var/www/init.sh
 #RUN cd /app && virtualenv venv
 #CMD tail -f /dev/null
-CMD ["/bin/bash","/opt/init.sh"]
 
-ENTRYPOINT "/opt/init.sh" && tail -f /dev/null
+
+ENTRYPOINT tail -f /dev/null
